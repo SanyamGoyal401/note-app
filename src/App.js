@@ -38,7 +38,7 @@ const App = () => {
   };
 
   const groupColor = (groupName) => {
-    let name = groupName.replaceAll("%20", " ");
+    let name = groupName.replace("%20", " ");
     for(let i=0; i<groups.length; i++){
       if(groups[i].groupName === name){
         return groups[i].color;
@@ -61,7 +61,7 @@ const App = () => {
               element={
                 <Group
                   group={window.location.pathname.split("/")[2]}
-                  color={groupColor(window.location.pathname.split("/")[2])}
+                  color={groupColor(window.location.href.split("/")[5])}
                   notes={getNotesByGroup(
                     window.location.pathname.split("/")[2]
                   )}
