@@ -43,7 +43,6 @@ const App = () => {
     return notes.filter((note) => note.group === group);
   };
 
-  const groupColor = (groupName) => {};
   return (
     <Router>
       <div className="app-container">
