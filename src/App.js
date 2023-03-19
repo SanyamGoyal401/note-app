@@ -37,6 +37,13 @@ const App = () => {
     return notes.filter((note) => note.group === group);
   };
 
+  const groupColor = (groupName) => {
+    for(let i=0; i<groups.length; i++){
+      if(groups[i].groupName === groupName){
+        return groups[i].color;
+      }
+    }
+  }
   return (
     <Router>
       <div className="app-container">
@@ -53,6 +60,7 @@ const App = () => {
               element={
                 <Group
                   group={window.location.pathname.split("/")[2]}
+                  color={groupColor(window.location.pathname.split("/")[2])}
                   notes={getNotesByGroup(
                     window.location.pathname.split("/")[2]
                   )}
