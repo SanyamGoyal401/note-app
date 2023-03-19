@@ -4,6 +4,7 @@ import Icon from "./Icon";
 
 const GroupList = ({ groups, clickCount, setClickCount }) => {
   let activeGroup = window.location.pathname.split("/")[2];
+  activeGroup = activeGroup.replaceAll("%20", " ");
   return (
     <div className="groupList"
     style={{marginTop:"12%", height:"80vh", overflow:"scroll"}}
