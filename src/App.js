@@ -61,7 +61,7 @@ const App = () => {
               element={
                 <Group
                   group={window.location.pathname.split("/")[2]}
-                  color={groupColor(window.location.href.split("/")[5])}
+                  color={groupColor("")}
                   notes={getNotesByGroup(
                     window.location.pathname.split("/")[2]
                   )}
