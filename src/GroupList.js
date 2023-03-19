@@ -5,8 +5,8 @@ import Icon from "./Icon";
 const GroupList = ({ groups, clickCount, setClickCount }) => {
   let activeGroup = window.location.pathname.split("/")[2];
   return (
-    <div
-    style={{marginTop:"12%"}}
+    <div className="groupList"
+    style={{marginTop:"12%", height:"80vh", overflow:"scroll"}}
     >
       {groups.map((group) => (
         <div

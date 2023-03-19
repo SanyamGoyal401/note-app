@@ -27,13 +27,14 @@ const AddGroupDialog = ({ addGroup }) => {
   };
 
   const buttonStyle = {
-    width: "10rem",
+    width: "80%",
     fontsize: "2rem",
     height: "2.5rem",
-    padding: "5px",
     borderRadius: "20px",
     backgroundColor: "black",
     color: "White",
+    marginTop:"5%",
+    marginLeft: "8%",
     cursor: "pointer",
   };
 
