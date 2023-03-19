@@ -38,7 +38,7 @@ const App = () => {
   };
 
   const groupColor = (groupName) => {
-    let name = groupName.replace("%20", " ");
+    let name = groupName.replaceAll("%20", " ");
     for(let i=0; i<groups.length; i++){
       if(groups[i].groupName === name){
         return groups[i].color;

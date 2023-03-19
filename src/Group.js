@@ -4,7 +4,7 @@ import NoteInput from "./NoteInput";
 import Icon from "./Icon";
 import "./Group.css";
 const Group = ({ group, color, notes, addNote }) => {
-  let name = group.replace("%20", " ");
+  let name = group.replaceAll("%20", " ");
   return (
     <div className="notes-view">
       <div className="group-header">
