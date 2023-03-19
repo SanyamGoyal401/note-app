@@ -1,0 +1,19 @@
+.group-header {
+  display: flex;
+  align-items: baseline;
+  padding: 10px;
+  font-weight: bold;
+  flex: 0.08;
+  background-color: #E8E8E8;
+}
+.notes-view{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title {
+  flex: 0.7;
+  font-size: 32px;
+  margin-left: 20px;
+}

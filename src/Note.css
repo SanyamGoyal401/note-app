@@ -1,0 +1,16 @@
+.note-tile{
+    padding: 1%;
+    display: flex;
+    align-items: baseline;
+    line-height: 1.8rem;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.date-tile{
+    flex: 0.3;
+}
+
+.text-tile{
+    flex: 0.7;
+}

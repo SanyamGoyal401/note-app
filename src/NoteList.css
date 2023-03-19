@@ -1,0 +1,12 @@
+.note-list{
+    background-color: #F7ECDC;
+    display: flex;
+    flex-direction: column;
+    flex: 0.82;
+    overflow: scroll;
+    padding: 2% 0 0 3%;
+}
+
+.note-list::-webkit-scrollbar{
+    display: none;
+}

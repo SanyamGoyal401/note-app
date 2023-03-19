@@ -1,0 +1,19 @@
+.app-container{
+    display: flex;
+    height: 100vh;
+}
+
+.group-title{
+    font-size: 32px;
+    font-weight: bold;
+    padding: 18px;
+    color: black;
+    background-color: white;
+}
+
+.group-list-container{
+    flex: 0.2;
+}
+.group-container{
+    flex: 0.8;
+}
