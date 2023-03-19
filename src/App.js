@@ -42,6 +42,15 @@ const App = () => {
   const getNotesByGroup = (group) => {
     return notes.filter((note) => note.group === group);
   };
+  const getColorByGroup = (group) => {
+    console.log(group);
+    for(let i=0; i<groups.length; i++){
+      if(groups[i].groupName === group.replaceAll("%20", " ")){
+        //console.log(groups[i].color);
+        return groups[i].color;
+      }
+    }
+  }
 
   return (
     <Router>
@@ -64,15 +73,9 @@ const App = () => {
               element={
                 <Group
                   group={window.location.pathname.split("/")[2]}
-                  color={() => {
-                    let groupName = window.location.pathname.split("/")[2];
-                    let name = groupName.replace("%20", " ");
-                    for (let i = 0; i < groups.length; i++) {
-                      if (groups[i].groupName === name) {
-                        return groups[i].color;
-                      }
-                    }
-                  }}
+                  color={getColorByGroup(
+                    window.location.pathname.split("/")[2]
+                  )}
                   notes={getNotesByGroup(
                     window.location.pathname.split("/")[2]
                   )}
