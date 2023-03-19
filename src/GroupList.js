@@ -11,7 +11,7 @@ const GroupList = ({ groups, clickCount, setClickCount }) => {
     >
       {groups.map((group) => (
         <div
-          key={group}
+          key={group.groupName}
           style={{
             fontSize: "19px",
             display: "flex",
@@ -19,20 +19,22 @@ const GroupList = ({ groups, clickCount, setClickCount }) => {
             margin: "3% 0 2% 3%",
             borderRadius: "20px 0 0 20px",
             padding: "14px",
-            backgroundColor: activeGroup === group ? "#F7ECDC" : "white"
+            backgroundColor: activeGroup === group.groupName ? "#F7ECDC" : "white"
           }}
         >
-          <Icon text={group.substring(0, 1)} />
+          <Icon text={group.groupName.substring(0, 1)} color={group.color} />
           <Link
-            to={`/group/${group}`}
+            to={`/group/${group.groupName}`}
             onClick={() => {
               setClickCount(clickCount + 1);
             }}
             style={{
               marginLeft: "13px",
+              color: "black",
+              textDecoration: "none",
             }}
           >
-            {group}
+            {group.groupName}
           </Link>
         </div>
       ))}

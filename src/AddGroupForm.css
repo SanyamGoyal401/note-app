@@ -1,0 +1,82 @@
+
+
+.addGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  height: 40px;
+  border: 2px solid grey;
+  padding-left: 10px;
+  border-radius: 20px;
+  font-size: 18px;
+  color: black;
+}
+input[type="text"]::placeholder {
+  color: black;
+}
+
+.color{
+    border-radius: 50%;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 0 5px;
+}
+.groupColor{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.colorPalette{
+    display: flex;
+    justify-content: space-between;
+}
+
+.addBorder{
+    border: 2px solid black;
+}
+
+.AddGroupbtn{
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+.groupname {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+
+.violet{
+    background-color: #B38BFA;
+}
+.pink{
+    background-color: #FF79F2;
+}
+.blue{
+    background-color: #43E6FC;
+}
+.orange{
+    background-color: #F19575;
+
+}
+.darkblue{
+    background-color: #0047FF;
+}
+.seablue{
+    background-color: #6691FF;
+}

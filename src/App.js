@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GroupList from "./GroupList";
 import Group from "./Group";
-import AddGroupForm from "./AddGroupForm";
+import AddGroupDialog from "./AddGroupDialog";
 import "./App.css";
 const App = () => {
   const [groups, setGroups] = useState([]);
@@ -16,12 +16,12 @@ const App = () => {
     setNotes(storedNotes);
   },[]);
 
-  const addGroup = (group) => {
-    if (!groups.includes(group)) {
-      const updatedGroups = [...groups, group];
-      setGroups(updatedGroups);
-      localStorage.setItem("groups", JSON.stringify(updatedGroups));
-    }
+  const addGroup = (groupName, color) => {
+     const group = {groupName, color};
+     if(groupName === "")return;
+    const updatedGroups = [...groups, group];
+    setGroups(updatedGroups);
+    localStorage.setItem("groups", JSON.stringify(updatedGroups));
   };
   
   const addNote = (text) => {
@@ -42,7 +42,7 @@ const App = () => {
       <div className="app-container">
         <div className="group-list-container">
           <div className="group-title">Pocket Notes</div>
-          <AddGroupForm addGroup={addGroup} />
+          <AddGroupDialog addGroup={addGroup} />
           <GroupList groups={groups} clickCount = {clickCount} setClickCount = {setClickCount} />
         </div>
         <div className="group-container">
